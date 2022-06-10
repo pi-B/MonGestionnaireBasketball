@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:800');
+
+h1, h2, h3{
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	margin: 0px;
+    background: #fcfaf7;
+    color: black;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.photoJoueur{
+	width: 20%;
+    min-width: 340px;
+    max-height: 340px;
+    border-style: solid;
+	border-width: 5px;
+	border-radius: 5px;
+	border-color: #466d99;
+}
+
+h2{
+	margin-right: 50px;
+	margin-top: 10px;
+	clip-path: polygon(0% 0%, 97% 0%, 100% 100%, 0% 100%);
+	background-color: #e70012;
+    margin-left: 50px !important;
+}
+
+h3{
+	margin-left: 100px;
+	color: #466d99;
+}
+  
+a {
+    color:white;
+}
+
+#select{
+	border-bottom: solid red 3px;
+}
+
+p {
+    text-indent: 20px;
+    padding-left: 20px;
+	padding-right: 20px ;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+}
+
+th {
+    background-color: #6281ba;
+    color : white;
+    font-weight: bold;
+}
+
+td {
+    text-align: center;
+}
+
+.header {
+	top: 0%;
+    background-color:#6281ba;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    
+}
+  
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #6281ba;
+}
+.header li button{
+	background-color: transparent;
+	text-align: center;
+	color : white;
+	border: none;
+}
+.header li a, .header li button {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid black;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+    font-family: 'Poppins', sans-serif;
+}
+  
+.header li a:hover, .header .menu-btn:hover,.header li button:hover {
+    background-color: #e70012;
+}
+  
+/* menu */
+  
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+  
+/* icone menu */
+  
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+  
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+  
+.header .menu-icon .navicon:before, 
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+  
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+  
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+  
+  /* boutton menu*/
+  
+.header .menu-btn {
+    display: none;
+}
+  
+.header .menu-btn:checked ~ .menu {
+    max-height: 300px;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'PT Sans', sans-serif;
+}
+
+@media screen and (min-width: 200px) {
+	.characternav {
+		max-width: 99%;
+		margin: auto;
+		padding: 0 1em;
+	}
+	
+	.charactericon {
+		margin: 0.45em 0.45em;
+		min-height: 120px;
+		max-width: 500px;
+	}
+}
+  
+  /* 48em = 768px */
+ 
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: left;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+}
+
+
+footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-contenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.footer-contenu h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.footer-contenu span{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 20px;
+    color: #cacdd2;
+}
+
+.logo_iut {
+    height: 50px;
+    width: 75px;
+}
+
+.dropdown_equipe{
+    margin-top: 7%;
+    margin-left: 28%;
+}
+
+#form_ajout_match{
+    margin-top: 2%;
+
+}
+
+#form_ajout_match input {
+    width: 15.3%;
+}
+
+.conteneur_photo{
+    position: fixed;
+    top:28%;
+    left:3%;
+    max-width:10%;
+    height:auto;
+    z-index: 100;
+    margin-right: 2%;
+}
+
+.photo_et_tableau{
+    margin-top: 5%;
+}
+
+.form_liste_match{
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photoEtInfos{
+    margin-top:70px;
+    margin-left:25px;
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+}
+
+.info{
+    font-size: 350%;
+}
+
+select{
+    font-family: 'PT Sans', sans-serif;
+    border:none;
+    background-color: rgba(230,230,230);
+    color:black;
+    font-size: 90%;
+}
+
+
+
+.info strong{
+    font-family: 'Poppins', sans-serif;
+}
+
+#nomEtNum{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-right: 10px;
+	margin-top: 10px;
+	clip-path: polygon(0% 0%, 97% 0%, 100% 100%, 0% 100%);
+    color: White;
+	background-color: #6281ba;
+    font-size:40px;
+}
+
+.nomJoueur{
+    font-weight: bold;
+    margin-left: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#numLicence{
+    float: right;
+    margin-right:35%;
+}
+
+#commentaire{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: 'PT Sans', sans-serif;
+    width : 70%;
+    height: 400px;
+    font-size: 250%;
+    color:black;
+    border: none;
+    background-color : rgba(230,230,230);
+    resize: none;
+}
+
+input{
+    font-family: 'PT Sans', sans-serif;
+    color:black;
+    border: none;
+    background-color : rgba(230,230,230);;
+}
+
+#scores{
+    float: right;
+    margin-right: 20%;
+    margin-top: 20px;
+    list-style: none;
+    overflow: hidden;
+}
+
+.enregister{
+    width: 50px;
+    position: absolute;
+    top: 70%;
+    left: 83%;
+    background-color: transparent;
+    
+}
+
+#joueurSurvole{
+    position: fixed;
+    max-width: 400px;
+
+   
+}
+
+.ajoutJoueur{
+    margin-right: 50px;
+    margin-top: 2%;
+    flex-direction: row;
+}
+
+.ajoutJoueur div{
+    margin-top: 5%;
+}
+
+.tabJoueurs{
+    margin-right: 20px !important;
+    margin-left: 30%;
+    float: center !important;
+}
+
+.generalTab{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+.tab{
+    width: 100%;
+}
+
+#newMatch{
+    margin-top:20px;
+}
+
+.envoyer{
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 93%;
+    background-color: transparent;
+
+}
+
+.envoyer :hover{
+    transform: scale(1.1)!important;
+	transition: 0.1s;
+	transition-timing-function: ease-in-out !important;
+}
+
+.com, .comd{
+    width:30%;
+}
+
+.comd{
+    text-align: justify;
+}
+
+.box-connexion{
+    display:flex;
+    position: absolute;
+    top:45%;
+    left:45%;
+    align-self: center;
+    border-style: solid;
+	border-width: 5px;
+	border-radius: 5px;
+	border-color: #466d99;
+}
+
+#erreur_titulaires{
+    visibility: hidden;
+    position: fixed; 
+    width: 28%;
+    height: 25%;
+    top:33%;
+    left: 35%;
+    border:solid;
+    border-color: grey;
+    border-radius: 10px;
+    text-align: center;
+    background-color:  #d08762;
+    color : white;
+    padding-top: auto;
+    padding-bottom: : auto;
+    z-index: 99;
+}
+
+#erreur_titulaires p {
+    padding-left : 5%;
+    padding-right : 5%;
+    padding-top: 2%;
+}
+
+#erreur_titulaires h1{
+    margin-bottom: 0;
+}
